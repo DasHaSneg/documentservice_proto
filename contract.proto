@@ -10,5 +10,7 @@ message Contract {
   string state = 4; 
   string seller = 5; 
   string buyer = 6; 
-  string createDate = 7; 
+  string sellerInn = 7;
+  string buyerInn = 8;
+  string createDate = 9; 
 }

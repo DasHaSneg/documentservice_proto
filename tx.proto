@@ -19,6 +19,8 @@ message MsgCreateContract {
   string creator = 1;
   string contractHash = 2;
   string buyer = 3;
+  string sellerInn = 4;
+  string buyerInn = 5;
 }
 
 message MsgCreateContractResponse {
