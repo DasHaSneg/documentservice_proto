@@ -37,6 +37,11 @@ service Query {
 		option (google.api.http).get = "/cosmonaut/documentservice/documentservice/annex";
 	}
 
+// Queries a list of ContractsByInn items.
+	rpc ContractsByInn(QueryContractsByInnRequest) returns (QueryContractsByInnResponse) {
+		option (google.api.http).get = "/cosmonaut/documentservice/documentservice/contracts_by_inn/{inn}";
+	}
+
 // this line is used by starport scaffolding # 2
 }
 
@@ -80,6 +85,16 @@ message QueryAllAnnexRequest {
 
 message QueryAllAnnexResponse {
 	repeated Annex Annex = 1 [(gogoproto.nullable) = false];
+	cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryContractsByInnRequest {
+	string inn = 1;
+	cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryContractsByInnResponse {
+	repeated Contract Contract = 1 [(gogoproto.nullable) = false];
 	cosmos.base.query.v1beta1.PageResponse pagination = 2;
 }
 
