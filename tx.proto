@@ -7,7 +7,7 @@ option go_package = "github.com/cosmonaut/documentservice/x/documentservice/type
 
 // Msg defines the Msg service.
 service Msg {
-      rpc CreateContract(MsgCreateContract) returns (MsgCreateContractResponse);
+  rpc CreateContract(MsgCreateContract) returns (MsgCreateContractResponse);
   rpc CreateAnnex(MsgCreateAnnex) returns (MsgCreateAnnexResponse);
   rpc SignAnnex(MsgSignAnnex) returns (MsgSignAnnexResponse);
   rpc SignContract(MsgSignContract) returns (MsgSignContractResponse);
